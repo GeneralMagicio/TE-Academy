@@ -1,5 +1,6 @@
 # Nextjs
 /.next
+/.swc
 
 # Node
 logs
