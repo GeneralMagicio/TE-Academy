@@ -6,3 +6,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input, select, textarea {
+  outline: none
+}
