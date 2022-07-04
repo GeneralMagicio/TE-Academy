@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true
-}
 
 module.exports = {
+  images: {
+    loader: 'akamai',
+    path: ''
+  },
+  reactStrictMode: true,
+  trailingSlash: true,
   webpack: (cfg) => {
     cfg.module.rules.push({
       test: /\.md$/,
@@ -11,6 +14,5 @@ module.exports = {
       options: { mode: ['react-component'] }
     })
     return cfg
-  },
-  nextConfig
+  }
 }
