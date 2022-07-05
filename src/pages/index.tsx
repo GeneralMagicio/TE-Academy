@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import { attributes, react as HomeContent } from '@/content/home.md'
 import { AppLayout } from '@/components/layouts/AppLayout'
 import { Button } from '@/components/buttons/Button'
 import { Marquee } from '@/components/Marquee'
@@ -11,6 +12,7 @@ import type { ReactElement } from 'react'
 const CourseCard = () => {
   return (
     <div className="h-[462px] min-w-[369px] max-w-[369px] bg-gradient-to-br from-te-lblue to-te-green rounded-2xl flex justify-center items-center drop-shadow-lg">
+      {console.log(attributes, HomeContent)}
       <div className="h-[460px] min-w-[367px] max-w-[367px] bg-white rounded-2xl px-6 py-7">
         <div className="rounded-2xl">
           <Image
