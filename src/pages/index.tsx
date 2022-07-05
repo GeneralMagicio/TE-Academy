@@ -12,7 +12,6 @@ import type { ReactElement } from 'react'
 const CourseCard = () => {
   return (
     <div className="h-[462px] min-w-[369px] max-w-[369px] bg-gradient-to-br from-te-lblue to-te-green rounded-2xl flex justify-center items-center drop-shadow-lg">
-      {console.log(attributes, HomeContent)}
       <div className="h-[460px] min-w-[367px] max-w-[367px] bg-white rounded-2xl px-6 py-7">
         <div className="rounded-2xl">
           <Image
@@ -116,7 +115,9 @@ const Home: NextPageWithLayout = () => {
               Learn, apply your skills, hack and contribute to the most exciting
               challenges in the crypto world
             </span>
-            <div className="h-16 w-48">
+            <div
+              className="h-16 w-48"
+              onClick={() => console.log(attributes, HomeContent)}>
               <Button label="Get Started" />
             </div>
             <div>
