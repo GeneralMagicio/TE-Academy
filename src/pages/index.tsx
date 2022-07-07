@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import { attributes, react as HomeContent } from '@/content/home.md'
 import { AppLayout } from '@/components/layouts/AppLayout'
 import { Button } from '@/components/buttons/Button'
 import { Marquee } from '@/components/Marquee'
@@ -114,7 +115,9 @@ const Home: NextPageWithLayout = () => {
               Learn, apply your skills, hack and contribute to the most exciting
               challenges in the crypto world
             </span>
-            <div className="h-16 w-48">
+            <div
+              className="h-16 w-48"
+              onClick={() => console.log(attributes, HomeContent)}>
               <Button label="Get Started" />
             </div>
             <div>
