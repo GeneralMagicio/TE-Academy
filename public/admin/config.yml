@@ -1,32 +1,10 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: production
 media_folder: public/img
 public_folder: img
 publish_mode: editorial_workflow
 collections:
-  - name: faq
-    label: FAQ
-    folder: content/faq
-    create: true
-    fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: Description
-        name: description
-        widget: string
-      - name: faq
-        label: FAQ
-        widget: list
-        fields:
-          - label: Question
-            name: question
-            widget: string
-          - label: Answer
-            name: answer
-            widget: string
-        multiple: true
   - name: terms-conditions
     label: Terms & Conditions
     folder: content/terms-conditions
@@ -278,9 +256,31 @@ collections:
         label: FAQ Page
         file: content/faq-page.yml
         fields:
-          - label: Main title
-            name: main-title
+          - name: main-title
+            label: Main title
             widget: string
+          - name: faq-section
+            label: FAQ Section
+            widget: list
+            fields:
+              - name: title
+                label: Title
+                widget: string
+              - name: description
+                label: Description
+                widget: string
+              - name: faq
+                label: FAQ
+                widget: list
+                fields:
+                  - label: Question
+                    name: question
+                    widget: string
+                  - label: Answer
+                    name: answer
+                    widget: string
+                multiple: true
+            multiple: true
       - name: terms-conditions-page
         label: Terms & Conditions Page
         file: content/terms-conditions-page.yml
