@@ -7,7 +7,7 @@ publish_mode: editorial_workflow
 collections:
   - name: faq
     label: FAQ
-    folder: content/faq
+    files: content/faq.md
     create: true
     fields:
       - label: Title
