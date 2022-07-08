@@ -256,7 +256,7 @@ collections:
         label: FAQ Page
         file: src/content/faq.md
         fields:
-          - name: main-title
+          - name: mainTitle
             label: Main title
             widget: string
           - name: faqContent
