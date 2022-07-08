@@ -254,7 +254,7 @@ collections:
             widget: string
       - name: faq-page
         label: FAQ Page
-        file: src/content/faq-page.yml
+        file: src/content/faq.md
         fields:
           - name: main-title
             label: Main title
