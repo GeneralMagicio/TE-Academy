@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import { attributes, react as HomeContent } from '@/content/home.md'
 import { AppLayout } from '@/components/layouts/AppLayout'
 import { Button } from '@/components/buttons/Button'
 import { Marquee } from '@/components/Marquee'
@@ -17,7 +16,7 @@ const CourseCard = () => {
           <Image
             height="210"
             layout="responsive"
-            src="/course_card_placeholder.png"
+            src="/assets/course_card_placeholder.png"
             width="320"
           />
         </div>
@@ -39,7 +38,7 @@ const CourseCard = () => {
           </div>
           <div className="w-[1px] border-l-[0.4px]" />
           <div className="w-1/2 flex justify-end items-center gap-2">
-            <Image height="16" src="/hat.svg" width="16" />
+            <Image height="16" src="/icons/hat.svg" width="16" />
             <span className="text-xs font-open font-semibold">20 enrolled</span>
             <Image height="44" src="/arrow_button.svg" width="44" />
           </div>
@@ -115,32 +114,28 @@ const Home: NextPageWithLayout = () => {
               Learn, apply your skills, hack and contribute to the most exciting
               challenges in the crypto world
             </span>
-            <div
-              className="h-16 w-48"
-              onClick={() => console.log(attributes, HomeContent)}>
+            <div className="h-16 w-48">
               <Button label="Get Started" />
             </div>
-            <div>
-              <span className="text-xl text-te-purple font-bai font-bold">
-                Our Official Partners
-              </span>
-              <div className="flex items-end gap-x-8">
-                {partners.map((partner) => (
-                  <Image
-                    key={`${partner.height}x${partner.width}`}
-                    height={partner.height}
-                    src={partner.src}
-                    width={partner.width}
-                  />
-                ))}
-              </div>
+            <span className="text-xl text-te-purple font-bai font-bold">
+              Our Official Partners
+            </span>
+            <div className="flex items-end gap-x-8">
+              {partners.map((partner) => (
+                <Image
+                  key={`${partner.height}x${partner.width}`}
+                  height={partner.height}
+                  src={partner.src}
+                  width={partner.width}
+                />
+              ))}
             </div>
           </div>
           <div>
             <Image
               height="680"
               layout="responsive"
-              src="/landing_page.svg"
+              src="/assets/landing_page.svg"
               width="815"
             />
           </div>
@@ -180,7 +175,7 @@ const Home: NextPageWithLayout = () => {
               nulla a mauris at morbi.
             </span>
           </div>
-          <div className="flex gap-x-16 justify-center">
+          <div className="mt-16 flex gap-x-16 justify-center">
             {badges.map((badge) => (
               <Badge
                 key={badge.title}
