@@ -254,22 +254,22 @@ collections:
             widget: string
       - name: faq-page
         label: FAQ Page
-        file: content/faq-page.yml
+        file: src/content/faq-page.yml
         fields:
           - name: main-title
             label: Main title
             widget: string
-          - name: faq-section
+          - name: faqContent
             label: FAQ Section
             widget: list
             fields:
               - name: title
                 label: Title
                 widget: string
-              - name: description
+              - name: content
                 label: Description
                 widget: string
-              - name: faq
+              - name: faqQuestions
                 label: FAQ
                 widget: list
                 fields:
@@ -278,7 +278,7 @@ collections:
                     widget: string
                   - label: Answer
                     name: answer
-                    widget: string
+                    widget: markdown
                 multiple: true
             multiple: true
       - name: terms-conditions-page
