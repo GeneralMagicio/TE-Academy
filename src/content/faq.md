@@ -1,5 +1,5 @@
 ---
-main-title: Frequently Asked Questions
+mainTitle: Frequently Asked Questions
 faqContent:
   - title: Signing up and account creation
     faqQuestions:
