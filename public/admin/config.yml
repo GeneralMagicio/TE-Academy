@@ -5,159 +5,134 @@ media_folder: public/img
 public_folder: img
 publish_mode: editorial_workflow
 collections:
-  - name: terms-conditions
-    label: Terms & Conditions
-    folder: content/terms-conditions
-    create: true
-    fields:
-      - label: Name
-        name: name
-        widget: string
-      - label: Title
-        name: title
-        widget: string
-      - label: Body
-        name: body
-        widget: markdown
-  - name: privacy-policy
-    label: Privacy Policy
-    folder: content/privacy-policy
-    create: true
-    fields:
-      - label: Name
-        name: name
-        widget: string
-      - label: Title
-        name: title
-        widget: string
-      - label: Body
-        name: body
-        widget: markdown
-  - name: live-courses
-    label: Live Courses
-    folder: content/live-courses
-    create: true
-    fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: Description
-        name: description
-        widget: string
-      - label: Author id
-        name: author-id
-        widget: string
-      - label: Nº of enrolled students
-        name: enrolled-students
-        widget: number
-      - label: Course date
-        name: course-date
-        widget: date
-        default: ""
-        format: MMM Do YY
-      - label: Course link
-        name: course-link
-        widget: string
-      - label: Course image
-        name: course-image
-        widget: image
-  - name: partners
-    label: Partners
-    folder: content/partners
-    create: true
-    fields:
-      - label: Name
-        name: name
-        widget: string
-      - label: Description
-        name: description
-        widget: string
-      - label: Image
-        name: image
-        widget: image
-  - name: gallery
-    label: Gallery
-    folder: content/gallery
-    create: true
-    fields:
-      - label: Image
-        name: image
-        widget: image
-      - label: Description
-        name: description
-        widget: string
-  - name: core-team
-    label: Core Team
-    folder: content/core-team
-    create: true
-    fields:
-      - label: Name
-        name: name
-        widget: string
-      - label: Role
-        name: role
-        widget: string
-      - label: LinkedIn
-        name: linkedin
-        widget: string
-      - label: Facebook
-        name: facebook
-        widget: string
-      - label: Instagram
-        name: instagram
-        widget: string
-      - label: Image
-        name: image
-        widget: image
-  - name: authors
-    label: Authors
-    folder: content/authors
-    create: true
-    fields:
-      - label: Name
-        name: name
-        widget: string
-      - label: Description
-        name: description
-        widget: string
-      - label: LinkedIn
-        name: linkedin
-        widget: string
-      - label: Facebook
-        name: facebook
-        widget: string
-      - label: Instagram
-        name: instagram
-        widget: string
-      - label: Image
-        name: image
-        widget: image
-  - name: testimonials
-    label: Testimonials
-    folder: content/testimonials
-    create: true
-    fields:
-      - label: Testimonial title
-        name: testimonial-title
-        widget: string
-      - label: Testimonial body
-        name: testimonial-body
-        widget: markdown
-      - label: Testimonial name
-        name: testimonial-name
-        widget: string
-      - label: Testimonial role
-        name: testimonial-role
-        widget: string
-      - label: Image
-        name: image
-        widget: image
+  - name: assets
+    label: Assets
+    files:
+      - name: live-courses
+        label: Live Courses
+        file: content/live-courses.md
+        fields:
+          - name: live-courses
+            label: Live Courses
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Author id
+                name: author-id
+                widget: string
+              - label: Nº of enrolled students
+                name: enrolled-students
+                widget: number
+              - label: Course date
+                name: course-date
+                widget: date
+                default: ""
+                format: MMM Do YY
+              - label: Course link
+                name: course-link
+                widget: string
+              - label: Course image
+                name: course-image
+                widget: image
+            multiple: true
+      - name: partners
+        label: Partners
+        file: content/partners.md
+        fields:
+          - name: partners
+            label: Partners
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Description
+                name: description
+                widget: string
+              - label: Image
+                name: image
+                widget: image
+            multiple: true
+      - name: gallery
+        label: Gallery
+        file: content/gallery.md
+        fields:
+          - name: gallery
+            label: Gallery
+            widget: list
+            fields:
+              - label: Image
+                name: image
+                widget: image
+              - label: Description
+                name: description
+                widget: string
+            multiple: true
+      - name: core-team
+        label: Core Team
+        file: content/core-team.md
+        fields:
+          - name: core-team
+            label: Core Team
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Role
+                name: role
+                widget: string
+              - label: LinkedIn
+                name: linkedin
+                widget: string
+              - label: Facebook
+                name: facebook
+                widget: string
+              - label: Instagram
+                name: instagram
+                widget: string
+              - label: Image
+                name: image
+                widget: image
+            multiple: true
+      - name: authors
+        label: Authors
+        file: content/authors.md
+        fields:
+          - name: authors
+            label: Authors
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Description
+                name: description
+                widget: string
+              - label: LinkedIn
+                name: linkedin
+                widget: string
+              - label: Facebook
+                name: facebook
+                widget: string
+              - label: Instagram
+                name: instagram
+                widget: string
+              - label: Image
+                name: image
+                widget: image
+            multiple: true
   - name: pages
     label: Pages
     files:
       - name: sign-up
         label: Sign Up/In Page
-        file: content/sign-up.yml
+        file: content/sign-up.md
         fields:
           - label: Main title
             name: main-title
@@ -179,7 +154,7 @@ collections:
             widget: string
       - name: landing-page
         label: Landing Page
-        file: content/landing-page.yml
+        file: content/landing-page.md
         fields:
           - label: Main title
             name: main-title
@@ -231,7 +206,7 @@ collections:
             widget: string
       - name: courses-page
         label: Courses Page
-        file: content/courses-page.yml
+        file: content/courses-page.md
         fields:
           - label: Main title
             name: main-title
@@ -241,7 +216,7 @@ collections:
             widget: string
       - name: contact-page
         label: Contact Page
-        file: content/contact-page.yml
+        file: content/contact-page.md
         fields:
           - label: Main title
             name: main-title
@@ -252,24 +227,24 @@ collections:
           - label: Subtitle
             name: subtitle
             widget: string
-      - name: faq-page
-        label: FAQ Page
-        file: src/content/faq.md
+      - name: faq
+        label: FAQ
+        file: content/faq-page.md
         fields:
-          - name: mainTitle
+          - name: main-title
             label: Main title
             widget: string
-          - name: faqContent
+          - name: faq-section
             label: FAQ Section
             widget: list
             fields:
               - name: title
                 label: Title
                 widget: string
-              - name: content
+              - name: description
                 label: Description
                 widget: string
-              - name: faqQuestions
+              - name: faq
                 label: FAQ
                 widget: list
                 fields:
@@ -278,26 +253,54 @@ collections:
                     widget: string
                   - label: Answer
                     name: answer
-                    widget: markdown
+                    widget: text
                 multiple: true
             multiple: true
       - name: terms-conditions-page
         label: Terms & Conditions Page
-        file: content/terms-conditions-page.yml
+        file: content/terms-conditions-page.md
         fields:
-          - label: Main title
-            name: main-title
+          - name: main-title
+            label: Main title
             widget: string
+          - name: terms-conditions
+            label: Terms & Conditions
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Title
+                name: title
+                widget: string
+              - label: Body
+                name: body
+                widget: text
+            multiple: true
       - name: privacy-policy-page
         label: Privacy Policy Page
-        file: content/privacy-policy-page.yml
+        file: content/privacy-policy-page.md
         fields:
-          - label: Main title
-            name: main-title
+          - name: main-title
+            label: Main title
             widget: string
+          - name: privacy-policy
+            label: Privacy Policy
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Title
+                name: title
+                widget: string
+              - label: Body
+                name: body
+                widget: text
+            multiple: true
       - name: study-page
         label: Study Page
-        file: content/study-page.yml
+        file: content/study-page.md
         fields:
           - label: Main title
             name: main-title
@@ -310,7 +313,7 @@ collections:
             widget: string
           - label: Body
             name: body
-            widget: markdown
+            widget: text
           - label: Steps title
             name: steps-title
             widget: string
@@ -326,11 +329,11 @@ collections:
                 widget: string
               - label: Body
                 name: body
-                widget: markdown
+                widget: text
             multiple: true
       - name: about-page
         label: About Page
-        file: content/about-page.yml
+        file: content/about-page.md
         fields:
           - label: Main title
             name: main-title
@@ -343,7 +346,7 @@ collections:
             widget: string
           - label: Body
             name: body
-            widget: markdown
+            widget: text
           - label: About banner
             name: about-banner
             widget: image
@@ -383,3 +386,23 @@ collections:
           - label: Footer image
             name: footer-image
             widget: image
+          - name: testimonials
+            label: Testimonials
+            widget: list
+            fields:
+              - label: Testimonial title
+                name: testimonial-title
+                widget: string
+              - label: Testimonial body
+                name: testimonial-body
+                widget: text
+              - label: Testimonial name
+                name: testimonial-name
+                widget: string
+              - label: Testimonial role
+                name: testimonial-role
+                widget: string
+              - label: Image
+                name: image
+                widget: image
+            multiple: true
