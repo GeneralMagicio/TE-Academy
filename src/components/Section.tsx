@@ -20,8 +20,8 @@ interface ISection {
 export function Section({ content, position, title }: ISection) {
   const [open, setOpen] = useState<boolean>(position === 0)
   return (
-    <div>
-      <div className="mb-4 flex items-center gap-x-2.5">
+    <>
+      <div className="flex items-center gap-x-2.5 border-b pb-4 mb-4 ">
         <Image height="16" src="/icons/questionMark.svg" width="16" />
         <div className="text-lg font-bai font-bold">{title}</div>
         <motion.div
@@ -38,10 +38,10 @@ export function Section({ content, position, title }: ISection) {
         {open && (
           <motion.div
             className="text-gray-400 font-open"
-            initial={{ opacity: 0, height: '0px' }}
             animate={{
               opacity: 1,
               height: 'fit-content',
+              marginBottom: '16px',
               transition: {
                 ease: 'easeInOut',
                 duration: 0.6,
@@ -54,6 +54,7 @@ export function Section({ content, position, title }: ISection) {
             exit={{
               opacity: 0,
               height: '0px',
+              marginBottom: '0px',
               transition: {
                 ease: 'easeInOut',
                 duration: 0.6,
@@ -62,11 +63,17 @@ export function Section({ content, position, title }: ISection) {
                   duration: 0.6
                 }
               }
+            }}
+            initial={{
+              opacity: 0,
+              height: '0px',
+              marginBottom: '0px'
             }}>
             {content}
+            <hr className="mt-4" />
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </>
   )
 }
