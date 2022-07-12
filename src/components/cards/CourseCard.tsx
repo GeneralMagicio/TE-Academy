@@ -53,11 +53,17 @@ export const CourseCard = ({ img, type = 'Online Course' }: ICourseCard) => {
           </div>
           <div className="w-[1px] border-l-[0.4px]" />
           <div className="w-3/5 flex justify-between items-center gap-2 ml-2">
-            <Image height="16" src="/icons/hat.svg" width="16" />
-            <span className="text-xs font-open font-semibold mr-auto">
-              20 enrolled
-            </span>
-            <Image height="44" src="/arrow_button.svg" width="44" />
+            {type === 'Online Course' && (
+              <>
+                <Image height="16" src="/icons/hat.svg" width="16" />
+                <span className="text-xs font-open font-semibold mr-auto">
+                  20 enrolled
+                </span>
+              </>
+            )}
+            <div className="ml-auto">
+              <Image height="44" src="/arrow_button.svg" width="44" />
+            </div>
           </div>
         </div>
       </div>
