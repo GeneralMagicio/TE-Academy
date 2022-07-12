@@ -4,113 +4,40 @@ import {
   Summary,
   SummaryContent,
   SummaryHeader,
-  SummaryOption,
   SummarySection
 } from '@/components/summary'
 import { AppLayout } from '@/components/layouts/AppLayout'
+import { attributes } from '@/content/PrivacyPolicyPage.md'
 import type { NextPageWithLayout } from './_app'
 import type { ReactElement } from 'react'
 
-const summaryContent: SummaryOption[] = [
-  { href: '#privacy', title: 'Privacy Policy' },
-  { href: '#summary', title: 'Privacy Summary' },
-  { href: '#data', title: 'Data we collect' }
-]
-
 const PrivacyPolicy: NextPageWithLayout = () => {
+  const { privacyPolicyContent, mainTitle } = attributes
   const [position, setPosition] = useState<number>(0)
 
   return (
     <>
-      <PageBanner title="Privacy Policy" />
+      <PageBanner title={mainTitle} />
       <div className="pb-16 pt-36 px-32 grid grid-cols-2">
         <Summary
+          href
           currentPosition={position}
-          items={summaryContent}
+          items={privacyPolicyContent}
           setPosition={setPosition}
         />
         <div className="flex flex-col gap-y-6">
-          <SummarySection position={0} setPosition={setPosition}>
-            <SummaryHeader sectionName="privacy">
-              The privacy policy will help you better understand how we collect
-              user data
-            </SummaryHeader>
-            <SummaryContent>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique
-              ultrices turpis ac mattis sapien. Pharetra id lorem at ut vitae,
-              lorem commodo. Fringilla justo, dui enim non nec convallis ac non.
-              Viverra cum proin dictum egestas pharetra et ipsum condimentum. Ut
-              in laoreet ultrices porta commodo enim. Tortor in erat nunc quam
-              nullam. Eget elit magna neque, urna. Pretium duis id senectus ut
-              varius. Id a porttitor lacus, mauris, commodo. Elit, arcu
-              scelerisque mi, tellus. Ut consectetur eleifend sit in. Ipsum
-              dictum at molestie ac odio. Pulvinar vel proin purus dui nunc
-              neque enim magna enim. Leo gravida vehicula orci, felis quis
-              elementum urna vitae pharetra. Risus neque id etiam ullamcorper
-              adipiscing tellus. Blandit a dictum lorem facilisis. Nullam
-              malesuada quisque nec eget tempus elementum nascetur aenean.
-              Aliquet tempor amet pulvinar dictum. Est integer amet nascetur sem
-              urna velit sed. Cursus blandit lorem lectus orci, lacus sit.
-              Imperdiet scelerisque et quis dictumst sed quam. Accumsan quis
-              nunc donec sagittis, dui, tincidunt enim. Purus praesent diam
-              morbi mi. Sed dolor fringilla curabitur arcu. Tincidunt neque
-              mattis fames sed massa. Vestibulum bibendum tellus pharetra justo
-              morbi at ornare molestie. Sit volutpat amet gravida scelerisque
-              etiam metus. Nibh felis velit, sodales sed tellus erat. Neque.
-            </SummaryContent>
-          </SummarySection>
-          <SummarySection position={1} setPosition={setPosition}>
-            <SummaryHeader sectionName="summary">Privacy Summary</SummaryHeader>
-            <SummaryContent>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique
-              ultrices turpis ac mattis sapien. Pharetra id lorem at ut vitae,
-              lorem commodo. Fringilla justo, dui enim non nec convallis ac non.
-              Viverra cum proin dictum egestas pharetra et ipsum condimentum. Ut
-              in laoreet ultrices porta commodo enim. Tortor in erat nunc quam
-              nullam. Eget elit magna neque, urna. Pretium duis id senectus ut
-              varius. Id a porttitor lacus, mauris, commodo. Elit, arcu
-              scelerisque mi, tellus. Ut consectetur eleifend sit in. Ipsum
-              dictum at molestie ac odio. Pulvinar vel proin purus dui nunc
-              neque enim magna enim. Leo gravida vehicula orci, felis quis
-              elementum urna vitae pharetra. Risus neque id etiam ullamcorper
-              adipiscing tellus. Blandit a dictum lorem facilisis. Nullam
-              malesuada quisque nec eget tempus elementum nascetur aenean.
-              Aliquet tempor amet pulvinar dictum. Est integer amet nascetur sem
-              urna velit sed. Cursus blandit lorem lectus orci, lacus sit.
-              Imperdiet scelerisque et quis dictumst sed quam. Accumsan quis
-              nunc donec sagittis, dui, tincidunt enim. Purus praesent diam
-              morbi mi. Sed dolor fringilla curabitur arcu. Tincidunt neque
-              mattis fames sed massa. Vestibulum bibendum tellus pharetra justo
-              morbi at ornare molestie. Sit volutpat amet gravida scelerisque
-              etiam metus. Nibh felis velit, sodales sed tellus erat. Neque.
-            </SummaryContent>
-          </SummarySection>
-          <SummarySection position={2} setPosition={setPosition}>
-            <SummaryHeader sectionName="data">What We Collect</SummaryHeader>
-            <SummaryContent>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique
-              ultrices turpis ac mattis sapien. Pharetra id lorem at ut vitae,
-              lorem commodo. Fringilla justo, dui enim non nec convallis ac non.
-              Viverra cum proin dictum egestas pharetra et ipsum condimentum. Ut
-              in laoreet ultrices porta commodo enim. Tortor in erat nunc quam
-              nullam. Eget elit magna neque, urna. Pretium duis id senectus ut
-              varius. Id a porttitor lacus, mauris, commodo. Elit, arcu
-              scelerisque mi, tellus. Ut consectetur eleifend sit in. Ipsum
-              dictum at molestie ac odio. Pulvinar vel proin purus dui nunc
-              neque enim magna enim. Leo gravida vehicula orci, felis quis
-              elementum urna vitae pharetra. Risus neque id etiam ullamcorper
-              adipiscing tellus. Blandit a dictum lorem facilisis. Nullam
-              malesuada quisque nec eget tempus elementum nascetur aenean.
-              Aliquet tempor amet pulvinar dictum. Est integer amet nascetur sem
-              urna velit sed. Cursus blandit lorem lectus orci, lacus sit.
-              Imperdiet scelerisque et quis dictumst sed quam. Accumsan quis
-              nunc donec sagittis, dui, tincidunt enim. Purus praesent diam
-              morbi mi. Sed dolor fringilla curabitur arcu. Tincidunt neque
-              mattis fames sed massa. Vestibulum bibendum tellus pharetra justo
-              morbi at ornare molestie. Sit volutpat amet gravida scelerisque
-              etiam metus. Nibh felis velit, sodales sed tellus erat. Neque.
-            </SummaryContent>
-          </SummarySection>
+          {privacyPolicyContent.map((item: any, index: number) => (
+            <SummarySection
+              key={item.name}
+              position={index}
+              setPosition={setPosition}>
+              <SummaryHeader
+                sectionName={item.name.toLowerCase().replace(/\s/g, '_')}>
+                {item.title}
+              </SummaryHeader>
+              <SummaryContent>{item.body}</SummaryContent>
+            </SummarySection>
+          ))}
         </div>
       </div>
     </>

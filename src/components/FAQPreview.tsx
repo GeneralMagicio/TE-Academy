@@ -1,7 +1,7 @@
 import { Section } from './Section'
 import React from 'react'
 import Image from 'next/image'
-import { attributes } from '@/content/faq.md'
+import { attributes } from '@/content/FaqPage.md'
 
 export function FAQPreview() {
   const { faqContent } = attributes
@@ -25,7 +25,6 @@ export function FAQPreview() {
         </div>
       </div>
       <div>
-        {console.log(faqContent)}
         {faqContent[0].faqQuestions.map((elem: any, index: number) => (
           <Section
             key={elem.question}

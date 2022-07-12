@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import classNames from 'classnames'
+import Link from 'next/link'
 import { Button } from '@/components/buttons/Button'
 
 interface INavbar {
@@ -23,11 +24,17 @@ export function Navbar({ isTransparent }: INavbar) {
         <div>Events Calendar</div>
       </div>
       <div className="h-full flex gap-x-10 text-sm font-bold items-center">
-        <div>FAQ</div>
-        <span className="text-te-purple">Sign in</span>
-        <div className="h-14 w-48">
-          <Button label="Sign up" />
-        </div>
+        <Link href="faq">
+          <div>FAQ</div>
+        </Link>
+        <Link href="/signin">
+          <span className="text-te-purple">Sign in</span>
+        </Link>
+        <Link href="/signup">
+          <div className="h-14 w-48">
+            <Button label="Sign up" />
+          </div>
+        </Link>
       </div>
     </nav>
   )

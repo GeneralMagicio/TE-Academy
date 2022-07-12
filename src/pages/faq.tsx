@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { attributes } from '@/content/faq.md'
+import { attributes } from '@/content/FaqPage.md'
 import { PageBanner } from '@/components/PageBanner'
 import { Summary } from '@/components/summary'
 import { Section } from '@/components/Section'
