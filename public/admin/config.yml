@@ -200,8 +200,8 @@ collections:
               - label: Subtitle
                 name: subtitle
                 widget: string
-              - label: Icon
-                name: icon
+              - label: Badge icon
+                name: badgeIcon
                 widget: image
             multiple: true
           - label: Live courses title
