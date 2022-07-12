@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 interface ICourseCard {
   img?: string
-  type: 'Online Course' | 'Virtual Live Sessions'
+  type?: 'Online Course' | 'Virtual Live Sessions'
 }
 
 const badgeColors = {
