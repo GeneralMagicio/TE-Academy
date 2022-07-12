@@ -8,19 +8,6 @@ coursesTitle: TE Fundamentals
 teFundamentalsSubtitle: Lorem ipsum dolor sit amet, consectetur adipiscing
   elit. Tellus orci laoreet lorem nibh fringilla fusce gravida. Elementum duis
   nulla a mauris at morbi.
-learnTitle: Advance your knowledge
-learnSubtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus
-  orci laoreet lorem nibh fringilla fusce gravida. Elementum duis nulla a mauris
-  at morbi.
-learnLeftTitle: Advance your Knowledge
-learnLeftSubtitle: Learn token engineering, at your own pace, whereever you
-  are. Join study groups and learn together. Earn your certificate.
-learnCenterTitle: Join, Contribute & Network
-learnCenterSubtitle: Learn token engineering, at your own pace, whereever you
-  are. Join study groups and learn together. Earn your certificate.
-learnRightTitle: Collaborate and start your professional TE career
-learnRightSubtitle: Learn token engineering, at your own pace, whereever you
-  are. Join study groups and learn together. Earn your certificate.
 liveCoursesTitle: " Upcoming Live Courses"
 liveCoursesSubtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Tellus orci laoreet lorem nibh fringilla fusce gravida. Elementum duis nulla a

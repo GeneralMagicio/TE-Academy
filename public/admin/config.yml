@@ -190,24 +190,17 @@ collections:
           - label: Learn subtitle
             name: learnSubtitle
             widget: string
-          - label: Learn icon left title
-            name: learnLeftTitle
-            widget: string
-          - label: Learn icon left subtitle
-            name: learnLeftSubtitle
-            widget: string
-          - label: Learn icon center title
-            name: learnCenterTitle
-            widget: string
-          - label: Learn icon center subtitle
-            name: learnCenterSubtitle
-            widget: string
-          - label: Learn icon right title
-            name: learnRightTitle
-            widget: string
-          - label: Learn icon right subtitle
-            name: learnRightSubtitle
-            widget: string
+          - name: learnContent
+              label: FAQ
+              widget: list
+              fields:
+                - label: Title
+                  name: title
+                  widget: string
+                - label: Subtitle
+                  name: subtitle
+                  widget: string
+              multiple: true
           - label: Live courses title
             name: liveCoursesTitle
             widget: string
