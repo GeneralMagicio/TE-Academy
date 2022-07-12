@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from '@/components/buttons/Button'
 
 interface IFooterHeader {
@@ -10,10 +11,6 @@ const FooterHeader = ({ children }: IFooterHeader) => {
   return <span className="text-white font-bai font-medium">{children}</span>
 }
 
-interface IFooterContent {
-  children: React.ReactNode
-}
-
 const socialMedia = [
   { name: 'Discord', src: '/social/gray/discord.svg' },
   { name: 'Medium', src: '/social/gray/medium.svg' },
@@ -22,8 +19,17 @@ const socialMedia = [
   { name: 'Youtube', src: '/social/gray/youtube.svg' }
 ]
 
-const FooterContent = ({ children }: IFooterContent) => {
-  return <span className="text-gray-400 font-open">{children}</span>
+interface IFooterContent {
+  children: React.ReactNode
+  href: string
+}
+
+const FooterContent = ({ children, href }: IFooterContent) => {
+  return (
+    <Link href={href}>
+      <a className="text-gray-400 font-open">{children}</a>
+    </Link>
+  )
 }
 
 export function Footer() {
@@ -32,25 +38,25 @@ export function Footer() {
       <div className="flex gap-x-20">
         <div className="flex flex-col flex-wrap gap-y-4">
           <FooterHeader>Quick Links</FooterHeader>
-          <FooterContent>Events</FooterContent>
-          <FooterContent>TE Journey</FooterContent>
-          <FooterContent>About TE</FooterContent>
-          <FooterContent>FAQs</FooterContent>
+          <FooterContent href="/">Events</FooterContent>
+          <FooterContent href="/">TE Journey</FooterContent>
+          <FooterContent href="/">About TE</FooterContent>
+          <FooterContent href="/faq">FAQs</FooterContent>
         </div>
         <div className="flex flex-col gap-y-4">
           <FooterHeader>Company</FooterHeader>
-          <FooterContent>Imprint</FooterContent>
-          <FooterContent>Privacy Policy</FooterContent>
-          <FooterContent>Terms &amp; Conditions</FooterContent>
-          <FooterContent>Contact Us</FooterContent>
+          <FooterContent href="/">Imprint</FooterContent>
+          <FooterContent href="/privacy">Privacy Policy</FooterContent>
+          <FooterContent href="/toc">Terms &amp; Conditions</FooterContent>
+          <FooterContent href="contact">Contact Us</FooterContent>
         </div>
         <div className="flex flex-col gap-y-4">
           <FooterHeader>Learning</FooterHeader>
-          <FooterContent>TE Fundamentals</FooterContent>
-          <FooterContent>Deep Dives</FooterContent>
+          <FooterContent href="/">TE Fundamentals</FooterContent>
+          <FooterContent href="/">Deep Dives</FooterContent>
           <FooterHeader>Account</FooterHeader>
-          <FooterContent>Sign in</FooterContent>
-          <FooterContent>Sing up</FooterContent>
+          <FooterContent href="singin">Sign in</FooterContent>
+          <FooterContent href="singup">Sing up</FooterContent>
         </div>
       </div>
       <div className="max-w-md flex flex-col gap-y-5">
