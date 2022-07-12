@@ -29,9 +29,9 @@ const FAQ: NextPageWithLayout = () => {
           setPosition={setPosition}
         />
         <div className="flex flex-col gap-y-6">
-          {faqContent.map((item) => {
+          {faqContent.map((item: any) => {
             const { faqQuestions } = item
-            return faqQuestions?.map((question, index: number) => (
+            return faqQuestions?.map((question: any, index: number) => (
               <Section
                 key={question.question}
                 content={question.answer}
