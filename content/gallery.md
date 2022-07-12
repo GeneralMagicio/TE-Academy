@@ -1,0 +1,7 @@
+---
+gallery:
+  - image: https://s3-alpha-sig.figma.com/img/041e/a48e/c61d2ffd41cc410fef1801045801bab2?Expires=1658707200&Signature=VBrNmbQ8spiu9RT6BFiFF4IBTHLMyLAvrGMATRKGft-0Av5S2CoojJHokmUALJII1ip4~N82~LPlOe-Zt3nOQv84Igdj8DeugARH5c0B6ap75nxxCl2pz9zGgvHuy6GJSaZvvitmQovGDmcw-qP1pnUdGBFTg2ZHaWkGILI7JVfb4GAtKN19KNEEn5zlEYuTWLkrtNzlQePscYzUL7ImGfHdq6ZIppZMFIByJjC~VdHO1ke03XFel4HBnV07wPohP0nfteGiu~7mpNgldnHsEZ0NvZAB9UVvCX4~uMJV~TLl0TZw37Rb~zgKO-qIXR2lNjpdhcmJdjI9hIfkhKmOIA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA
+    description: image 1
+  - image: https://s3-alpha-sig.figma.com/img/7f32/68b9/03b12c7cfa79467b8e93838d40f030dc?Expires=1658707200&Signature=B1jLDniDZ6aW1Qgl4B2Xdi9sjSMNJC5n2GKO8qMtMBixA6T4MjBqtpmEiLOi6YALqCS6WR8~ojL0bEMSfdysxjUR8GBF7sfhAMKUG3XQIFlXTR85X74RFIs7~pHoWKV2-zsPOGNvrdefE497jGRFBRe28DlloAYCnGZX0wWNDrRmNftT8jONODa7v-7E2pH0VwUJBzF-KN2C1w08Zh4rSg43osUgniSIaW6PGkEB7klwXL-TnCQyEQFLQ3uf0l-uFdpDfp4AfHLoxvXDPzHz~TOCWZ2lHoiWzwmRLoVr4PetLFhVGSTmiUVZtCf0FeJgtkbl1Wiek-YZ8tlRpGlDjw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA
+    description: image 2
+---
