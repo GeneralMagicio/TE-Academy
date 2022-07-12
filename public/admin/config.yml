@@ -200,6 +200,9 @@ collections:
               - label: Subtitle
                 name: subtitle
                 widget: string
+              - label: Icon
+                name: icon
+                widget: image
             multiple: true
           - label: Live courses title
             name: liveCoursesTitle
