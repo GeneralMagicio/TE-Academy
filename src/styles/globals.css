@@ -7,6 +7,10 @@
 @tailwind components;
 @tailwind utilities;
 
+a {
+  cursor: pointer;
+}
+
 input, select, textarea {
   outline: none
 }
