@@ -1,13 +1,13 @@
 ---
-main-title: Privacy Policy
-privacy-policy:
+mainTitle: Privacy Policy
+privacyPolicyContent:
   - name: Privacy Policy
     title: The privacy policy will help you better understand how we collect user data
     body: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique
       ultrices turpis ac mattis sapien. Pharetra id lorem at ut vitae, lorem
       commodo. Fringilla justo, dui enim non nec convallis ac non. Viverra cum
-      proin dictum egestas pharetra et ipsum condimentum. Ut in laoreet ultrices
+      proin dictum **egestas** pharetra et ipsum condimentum. Ut in laoreet ultrices
       porta commodo enim. Tortor in erat nunc quam nullam. Eget elit magna
       neque, urna. Pretium duis id senectus ut varius. Id a porttitor lacus,
       mauris, commodo. Elit, arcu scelerisque mi, tellus. Ut consectetur

@@ -1,6 +1,6 @@
 ---
-main-title: Terms and Conditions
-terms-conditions:
+mainTitle: Terms and Conditions
+termsConditionsContent:
   - name: Terms & Condition
     title: The terms and conditions will help you better understand how we serve you
     body: >-

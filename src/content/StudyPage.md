@@ -1,10 +1,10 @@
 ---
-main-title: Study at TE Academy
-study-title: So what is "token engineering?"
+mainTitle: Study at TE Academy
+studyTitle: So what is "token engineering?"
 subtitle: Welcome to the Token Engineering community
-steps-title: How does it work?
-study-banner: https://s3-alpha-sig.figma.com/img/8e6c/9e62/789d2b70788fc300f1e9ebce80efcaaf?Expires=1658707200&Signature=RiuNVm8VeRyWYL1iTxvdEGQRuAzf~mBzMKnxadS5wC2X4vrsWiWMb2pe5Ip0WNQed9ClW~b9dZEc5gLSw5p3KnBHLyH1rsO5zkM4700mKNeHimI8fgpybJp5KYkmardY30~QvLvSZnnPNlGoeVUOL-MYfbWeA4Pn6MP5zLJikguzD4KBpPuTuy-aelFxC4tldqXP8n7Krjk3ZfogFY5ovsULIB3-DDaSyrBbwBkUqwlFHeDIgAcothZiPIBs6RLUgbcW0l5I1RPUXdqkJ2~EFt54l0tRy6bt~aq1mnTv1odPt45kNaLGX-qPpL6zFHP3A3CW9UDGMmxdhYWXq86XoQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA
-study-steps:
+stepsTitle: How does it work?
+studyBanner: https://s3-alpha-sig.figma.com/img/8e6c/9e62/789d2b70788fc300f1e9ebce80efcaaf?Expires=1658707200&Signature=RiuNVm8VeRyWYL1iTxvdEGQRuAzf~mBzMKnxadS5wC2X4vrsWiWMb2pe5Ip0WNQed9ClW~b9dZEc5gLSw5p3KnBHLyH1rsO5zkM4700mKNeHimI8fgpybJp5KYkmardY30~QvLvSZnnPNlGoeVUOL-MYfbWeA4Pn6MP5zLJikguzD4KBpPuTuy-aelFxC4tldqXP8n7Krjk3ZfogFY5ovsULIB3-DDaSyrBbwBkUqwlFHeDIgAcothZiPIBs6RLUgbcW0l5I1RPUXdqkJ2~EFt54l0tRy6bt~aq1mnTv1odPt45kNaLGX-qPpL6zFHP3A3CW9UDGMmxdhYWXq86XoQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA
+studySteps:
   - title: Define system goals & properties
     body: Token engineering design starts with understanding the desired goals of a
       given system, and then working backwards to determine the properties and
