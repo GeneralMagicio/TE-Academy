@@ -314,8 +314,8 @@ collections:
           - label: Subtitle
             name: subtitle
             widget: string
-          - label: Body
-            name: body
+          - label: BodyContent
+            name: bodyContent
             widget: text
           - label: Steps title
             name: stepsTitle

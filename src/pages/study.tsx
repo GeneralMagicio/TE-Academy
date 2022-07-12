@@ -28,8 +28,14 @@ const StudyContentCard = ({ content, number, title }: IStudyContentCard) => {
 }
 
 const Study: NextPageWithLayout = () => {
-  const { body, mainTitle, stepsTitle, studySteps, studyTitle, subtitle } =
-    attributes
+  const {
+    bodyContent,
+    mainTitle,
+    stepsTitle,
+    studySteps,
+    studyTitle,
+    subtitle
+  } = attributes
   return (
     <>
       <PageBanner title={mainTitle} />
@@ -45,7 +51,7 @@ const Study: NextPageWithLayout = () => {
             {subtitle}
           </span>
           <span className="text-6xl font-bai font-bold">{studyTitle}</span>
-          <span className="text-gray-400 font-open">{body}</span>
+          <span className="text-gray-400 font-open">{bodyContent}</span>
         </div>
       </div>
       <div className="relative bg-white z-10 pt-36 px-20">
