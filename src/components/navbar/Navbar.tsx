@@ -21,7 +21,9 @@ export function Navbar({ isTransparent }: INavbar) {
         </a>
       </Link>
       <div className="flex gap-x-10 text-sm font-bold">
-        <div>Explore Courses</div>
+        <Link href="/explore">
+          <a>Explore Courses</a>
+        </Link>
         <div>Curriculum</div>
         <div>Events Calendar</div>
       </div>
