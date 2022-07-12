@@ -15,9 +15,11 @@ export function Navbar({ isTransparent }: INavbar) {
         'absolute h-[100px] w-full px-20 py-5 flex justify-between items-center z-10',
         isTransparent ? 'bg-transparent' : 'bg-white'
       )}>
-      <div className="flex">
-        <Image height="52" src="/logos/TE/black.svg" width="52" />
-      </div>
+      <Link href="/">
+        <a className="flex">
+          <Image height="52" src="/logos/TE/black.svg" width="52" />
+        </a>
+      </Link>
       <div className="flex gap-x-10 text-sm font-bold">
         <div>Explore Courses</div>
         <div>Curriculum</div>
@@ -25,10 +27,10 @@ export function Navbar({ isTransparent }: INavbar) {
       </div>
       <div className="h-full flex gap-x-10 text-sm font-bold items-center">
         <Link href="faq">
-          <div>FAQ</div>
+          <a>FAQ</a>
         </Link>
         <Link href="/signin">
-          <span className="text-te-purple">Sign in</span>
+          <a className="text-te-purple">Sign in</a>
         </Link>
         <Link href="/signup">
           <div className="h-14 w-48">
