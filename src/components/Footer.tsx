@@ -36,20 +36,6 @@ export function Footer() {
   return (
     <footer className="absolute h-[500px] pb-16 pt-24 px-32 flex flex-wrap justify-between bg-te-dark z-10">
       <div className="flex gap-x-20">
-        <div className="flex flex-col flex-wrap gap-y-4">
-          <FooterHeader>Quick Links</FooterHeader>
-          <FooterContent href="/">Events</FooterContent>
-          <FooterContent href="/">TE Journey</FooterContent>
-          <FooterContent href="/">About TE</FooterContent>
-          <FooterContent href="/faq">FAQs</FooterContent>
-        </div>
-        <div className="flex flex-col gap-y-4">
-          <FooterHeader>Company</FooterHeader>
-          <FooterContent href="/">Imprint</FooterContent>
-          <FooterContent href="/privacy">Privacy Policy</FooterContent>
-          <FooterContent href="/toc">Terms &amp; Conditions</FooterContent>
-          <FooterContent href="contact">Contact Us</FooterContent>
-        </div>
         <div className="flex flex-col gap-y-4">
           <FooterHeader>Learning</FooterHeader>
           <FooterContent href="/">TE Fundamentals</FooterContent>
@@ -57,6 +43,21 @@ export function Footer() {
           <FooterHeader>Account</FooterHeader>
           <FooterContent href="singin">Sign in</FooterContent>
           <FooterContent href="singup">Sing up</FooterContent>
+        </div>
+        <div className="flex flex-col flex-wrap gap-y-4">
+          <FooterHeader>Quick Links</FooterHeader>
+          <FooterContent href="/">Events</FooterContent>
+          <FooterContent href="/">TE Journey</FooterContent>
+          <FooterContent href="/">Blog</FooterContent>
+          <FooterContent href="/">About TE</FooterContent>
+          <FooterContent href="/faq">FAQs</FooterContent>
+        </div>
+        <div className="flex flex-col gap-y-4">
+          <FooterHeader>More information</FooterHeader>
+          <FooterContent href="/">Imprint</FooterContent>
+          <FooterContent href="/privacy">Privacy Policy</FooterContent>
+          <FooterContent href="/toc">Terms &amp; Conditions</FooterContent>
+          <FooterContent href="contact">Contact Us</FooterContent>
         </div>
       </div>
       <div className="max-w-md flex flex-col gap-y-5">
