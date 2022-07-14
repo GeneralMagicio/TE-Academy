@@ -5,6 +5,7 @@ import { TextArea } from '@/components/inputs/TextArea'
 import { Select } from '@/components/inputs/Select'
 import { Button } from '@/components/buttons/Button'
 import { AppLayout } from '@/components/layouts/AppLayout'
+import { attributes } from '@/content/ContactPage.md'
 import type { ReactElement } from 'react'
 import type { NextPageWithLayout } from './_app'
 
@@ -15,18 +16,14 @@ const inputFields = [
 ]
 
 const Contact: NextPageWithLayout = () => {
+  const { contactTitle, mainTitle, subtitle } = attributes
   return (
     <>
-      <PageBanner title="Contact us" />
+      <PageBanner title={mainTitle} />
       <div className="pb-16 pt-36 px-32 grid grid-cols-2 gap-x-20">
         <div className="flex flex-col gap-y-6 justify-center">
-          <div className="text-5xl font-bai font-bold">
-            We are glad you made it here. Feel free to reach out to us.
-          </div>
-          <div className="text-gray-400 text-xl font-bai">
-            Learn, apply your skills, hack and contribute to the most exciting
-            challenges in the crypto world
-          </div>
+          <div className="text-5xl font-bai font-bold">{contactTitle}</div>
+          <div className="text-gray-400 text-xl font-bai">{subtitle}</div>
         </div>
         <div className="flex flex-col gap-y-4">
           {inputFields.map((field) => (

@@ -4,7 +4,7 @@ import Image from 'next/image'
 interface ISelect {
   name: string
   options: any[]
-  title: string
+  title?: string
 }
 
 export function Select({ name, options, title }: ISelect) {
@@ -22,9 +22,11 @@ export function Select({ name, options, title }: ISelect) {
           ))}
         </select>
       </div>
-      <label className="text-gray-400 font-bai font-medium" htmlFor={name}>
-        {title}
-      </label>
+      {title && (
+        <label className="text-gray-400 font-bai font-medium" htmlFor={name}>
+          {title}
+        </label>
+      )}
     </div>
   )
 }

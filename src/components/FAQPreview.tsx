@@ -1,15 +1,11 @@
 import { Section } from './Section'
 import React from 'react'
 import Image from 'next/image'
-
-const studySectionContent = [
-  { content: '', title: 'Can I use The courses in open-source projects?' },
-  { content: '', title: 'Where can I download files?' },
-  { content: '', title: 'Can I use TE academy for commercial purposes?' },
-  { content: '', title: 'What about browser support?' }
-]
+import { attributes } from '@/content/FaqPage.md'
 
 export function FAQPreview() {
+  const { faqContent } = attributes
+
   return (
     <div className="h-[600px] grid grid-cols-2 justify-center items-center pl-28 pr-14 bg-white">
       <div className="max-w-lg flex flex-col gap-y-4">
@@ -29,8 +25,13 @@ export function FAQPreview() {
         </div>
       </div>
       <div>
-        {studySectionContent.map((elem) => (
-          <Section key={elem.title} content={elem.content} title={elem.title} />
+        {faqContent[0].faqQuestions.map((elem: any, index: number) => (
+          <Section
+            key={elem.question}
+            content={elem.answer}
+            position={index}
+            title={elem.question}
+          />
         ))}
       </div>
     </div>
