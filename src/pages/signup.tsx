@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { TextField } from '@/components/inputs/TextField'
 import { Button } from '@/components/buttons/Button'
 import { SignLayout } from '@/components/layouts/SignLayout'
+import { attributes } from '@/content/SignUp.md'
 import type { NextPageWithLayout } from './_app'
 
 const signUpFields = [
@@ -25,12 +26,13 @@ const socialSignOptions = [
 ]
 
 const SignUp: NextPageWithLayout = () => {
+  const { messageSubtitle, messageTitle } = attributes
   return (
     <div className="m-auto max-w-md">
       <div className="flex flex-col">
-        <span className="text-3xl font-bai font-bold">Create your account</span>
+        <span className="text-3xl font-bai font-bold">{messageTitle}</span>
         <span className="text-gray-400 text-sm font-bai font-medium">
-          Sign up takes less than 2 minutes
+          {messageSubtitle}
         </span>
       </div>
       <div className="mt-10 flex justify-between gap-x-4">
@@ -71,7 +73,12 @@ const SignUp: NextPageWithLayout = () => {
 }
 
 SignUp.getLayout = function getLayout(page: ReactElement) {
-  return <SignLayout>{page}</SignLayout>
+  const { mainTitle, subtitle } = attributes
+  return (
+    <SignLayout subtitle={subtitle} title={mainTitle}>
+      {page}
+    </SignLayout>
+  )
 }
 
 export default SignUp

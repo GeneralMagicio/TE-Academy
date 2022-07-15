@@ -26,7 +26,12 @@ export function PageBanner({ title }: IPageBanner) {
       <div className="absolute z-10 bottom-5 right-1/4">
         <Image height="26" src="/artifacts/star.svg" width="26" />
       </div>
-      <Image height="512" layout="responsive" src="/dark_bg.png" width="1512" />
+      <Image
+        height="512"
+        layout="responsive"
+        src="/assets/dark_bg.png"
+        width="1512"
+      />
     </div>
   )
 }
