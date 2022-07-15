@@ -126,12 +126,12 @@ const Home: NextPageWithLayout = (props: any) => {
               return (
                 <CourseCard
                   key={course.id}
-                  img={course.courseImage}
                   authorImg={course.author.image}
                   authorName={course.author.name}
-                  title={course.title}
                   category={course.categories[0]}
                   enrolledStudents={course.enrolledStudents}
+                  img={course.courseImage}
+                  title={course.title}
                 />
               )
             })}
