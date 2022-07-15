@@ -3,6 +3,9 @@
 module.exports = {
   reactStrictMode: true,
   trailingSlash: true,
+  images: {
+    domains: ['lwfiles.mycourse.app']
+  },
   webpack: (cfg) => {
     cfg.module.rules.push({
       test: /\.md$/,
