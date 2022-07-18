@@ -16,28 +16,94 @@ collections:
             label: Live Courses
             widget: list
             fields:
+              - label: Course ID
+                name: courseId
+                widget: string
               - label: Title
                 name: title
                 widget: string
+              - label: Subtitle
+                name: subtitle
+                widget: string
+              - label: Vendor
+                name: vendor
+                widget: string
+              - label: Vendor Avatar
+                name: vendorAvatar
+                widget: image
+              - label: Course Category
+                name: courseCategory
+                widget: select
+                options: [Virtual Live Session, IRL Events]
               - label: Description
                 name: description
                 widget: text
-              - label: Author id
-                name: authorId
+              - label: CTA Text
+                name: ctaText
                 widget: string
-              - label: Nº of enrolled students
-                name: enrolledStudents
-                widget: number
-              - label: Course date
-                name: courseDate
-                widget: date
+              - label: Registration Form Link
+                name: registrationFormLink
+                widget: string
+              - label: Course Start
+                name: courseStart
+                widget: datetime
                 default: ""
-                format: MMM Do YY
-              - label: Course link
+                date_format: DD.MM.YYYY
+                time_format: HH:mm
+                required: false
+              - label: Course End
+                name: courseEnd
+                widget: datetime
+                default: ""
+                date_format: DD.MM.YYYY
+                time_format: HH:mm
+                required: false
+              - label: Course Link
                 name: courseLink
                 widget: string
+              - label: Show at Homepage
+                name: showHomepage
+                widget: boolean
+                default: true
               - label: Course image
                 name: courseImage
+                widget: image
+            multiple: true
+      - name: eventsCalendar
+        label: Events Calendar
+        file: src/content/EventsCalendar.md
+        fields:
+          - name: eventsCalendar
+            label: Events Calendar
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Subtitle
+                name: subtitle
+                widget: string
+              - label: Host
+                name: host
+                widget: string
+              - label: Course Category
+                name: courseCategory
+                widget: select
+                options: [Virtual Live Session, IRL Events]
+              - label: Event Date
+                name: eventDate
+                widget: datetime
+                default: ""
+                date_format: DD.MM.YYYY
+                time_format: HH:mm
+              - label: Url
+                name: url
+                widget: string
+              - label: Course ID
+                name: courseId
+                widget: string
+              - label: Event image
+                name: eventImage
                 widget: image
             multiple: true
       - name: partners
@@ -81,47 +147,17 @@ collections:
             label: Core Team
             widget: list
             fields:
+              - label: User Id
+                name: userId
+                widget: string
               - label: Name
                 name: name
                 widget: string
               - label: Role
                 name: role
                 widget: string
-              - label: LinkedIn
-                name: linkedin
-                widget: string
-              - label: Facebook
-                name: facebook
-                widget: string
-              - label: Instagram
-                name: instagram
-                widget: string
-              - label: Image
-                name: image
-                widget: image
-            multiple: true
-      - name: authors
-        label: Authors
-        file: src/content/Authors.md
-        fields:
-          - name: authors
-            label: Authors
-            widget: list
-            fields:
-              - label: Name
-                name: name
-                widget: string
               - label: Description
                 name: description
-                widget: string
-              - label: LinkedIn
-                name: linkedin
-                widget: string
-              - label: Facebook
-                name: facebook
-                widget: string
-              - label: Instagram
-                name: instagram
                 widget: string
               - label: Image
                 name: image
@@ -181,7 +217,7 @@ collections:
           - label: Courses title
             name: coursesTitle
             widget: string
-          - label: TE Fundamentals subtitle
+          - label: Courses subtitle
             name: teFundamentalsSubtitle
             widget: string
           - label: Learn title
