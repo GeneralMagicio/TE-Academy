@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { GetServerSideProps } from 'next'
 import { motion } from 'framer-motion'
 import { Marquee } from '@/components/Marquee'
 import { FAQPreview } from '@/components/FAQPreview'
@@ -14,6 +15,19 @@ interface IBadge {
   content: string
   img?: string
   title: string
+}
+
+interface ICourse {
+  id: string
+  title: string
+  description: string
+  author: {
+    name: string
+    image: string | null
+  }
+  access: string
+  courseImage: string | null
+  enrolledStudents: number
 }
 
 const Badge = ({ content, img, title }: IBadge) => {
@@ -41,7 +55,7 @@ const partners = [
   { height: '45', src: '/logos/partners/github.svg', width: '45' }
 ]
 
-const Home: NextPageWithLayout = () => {
+const Home: NextPageWithLayout = (props: any) => {
   const [test, setTest] = useState<number>(0)
   return (
     <div className="w-full bg-[url('/assets/gray_bg.png')]">
@@ -108,16 +122,19 @@ const Home: NextPageWithLayout = () => {
             animate={{ left: `-${test * 376}px` }}
             className="relative flex gap-x-6 py-6"
             initial={false}>
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
+            {props.courses.map((course: any) => {
+              return (
+                <CourseCard
+                  key={course.id}
+                  authorImg={course.author.image}
+                  authorName={course.author.name}
+                  category={course.categories[0]}
+                  enrolledStudents={course.enrolledStudents}
+                  img={course.courseImage}
+                  title={course.title}
+                />
+              )
+            })}
           </motion.div>
           {test < 7 && (
             <div
@@ -196,6 +213,49 @@ const Home: NextPageWithLayout = () => {
       <FAQPreview />
     </div>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  let allCoursesRaw = { data: [] }
+  const options: any = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Lw-Client': process.env.LMS_CLIENT,
+      Authorization: process.env.LMS_API_KEY
+    }
+  }
+
+  await fetch('https://api.us-e1.learnworlds.com/v2/courses', options)
+    .then((res) => res.json())
+    .then((json) => (allCoursesRaw = json))
+
+  const courses: ICourse[] = await Promise.all(
+    allCoursesRaw.data.map(async (course: any) => {
+      const responseCourseAnalytics = await fetch(
+        `https://api.us-e1.learnworlds.com/v2/courses/${course.id}/analytics`,
+        options
+      )
+      const courseAnalytics = await responseCourseAnalytics.json()
+
+      return {
+        id: course.id,
+        title: course.title,
+        description: course.description,
+        categories: course.categories,
+        author: course.author,
+        access: course.access,
+        courseImage: course.courseImage,
+        enrolledStudents: courseAnalytics.students
+      }
+    })
+  )
+
+  return {
+    props: {
+      courses
+    }
+  }
 }
 
 Home.getLayout = function getLayout(page: ReactElement) {

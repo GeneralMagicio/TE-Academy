@@ -4,6 +4,11 @@ import classNames from 'classnames'
 
 interface ICourseCard {
   img?: string
+  authorImg?: string
+  authorName?: string
+  title?: string
+  category?: string
+  enrolledStudents?: number
   type?: 'Online Course' | 'Virtual Live Sessions'
 }
 
@@ -12,7 +17,15 @@ const badgeColors = {
   'Virtual Live Sessions': 'bg-te-purple'
 }
 
-export const CourseCard = ({ img, type = 'Online Course' }: ICourseCard) => {
+export const CourseCard = ({
+  img,
+  authorImg,
+  authorName,
+  title,
+  category,
+  enrolledStudents,
+  type = 'Online Course'
+}: ICourseCard) => {
   return (
     <div className="h-[518px] min-w-[369px] max-w-[369px] bg-gradient-to-br from-te-lblue to-te-green rounded-2xl flex justify-center items-center drop-shadow-lg">
       <div className="h-[516px] min-w-[367px] max-w-[367px] bg-white rounded-2xl px-6 py-7">
@@ -20,16 +33,14 @@ export const CourseCard = ({ img, type = 'Online Course' }: ICourseCard) => {
           <Image
             height="210"
             layout="responsive"
-            src="/assets/course_card_placeholder.png"
+            src={img || '/assets/course_card_placeholder.png'}
             width="320"
           />
         </div>
         <div className="my-6 flex flex-col gap-y-2">
-          <span className="text-xl font-bai font-bold">
-            Introduction to cryptoeconomic system
-          </span>
+          <span className="text-xl font-bai font-bold">{title}</span>
           <span className="text-sm text-gray-400 font-open font-semibold">
-            TE Fundamentals Part 1
+            {category}
           </span>
         </div>
         <div className="mb-3 border-t-[0.4px]" />
@@ -45,11 +56,13 @@ export const CourseCard = ({ img, type = 'Online Course' }: ICourseCard) => {
             <div className="h-[32px] w-[32px] rounded-full">
               <Image
                 height="32"
-                src={img || '/logos/TE/black.svg'}
+                src={authorImg || '/logos/TE/black.svg'}
                 width="32"
               />
             </div>
-            <span className="text-xs font-open font-semibold">TE Academy</span>
+            <span className="text-xs font-open font-semibold">
+              {authorName || 'TE Academy'}
+            </span>
           </div>
           <div className="w-[1px] border-l-[0.4px]" />
           <div className="w-3/5 flex justify-between items-center gap-2 ml-2">
@@ -57,7 +70,7 @@ export const CourseCard = ({ img, type = 'Online Course' }: ICourseCard) => {
               <>
                 <Image height="16" src="/icons/hat.svg" width="16" />
                 <span className="text-xs font-open font-semibold mr-auto">
-                  20 enrolled
+                  {enrolledStudents || 0} enrolled
                 </span>
               </>
             )}
