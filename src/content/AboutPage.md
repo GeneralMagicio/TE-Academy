@@ -14,8 +14,18 @@ galleryTitle: Our Gallery
 gallerySubtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Quisque placerat scelerisque tortor ornare ornare. Quisque placerat
   scelerisque tortor ornare ornare Convallis felis vitae tortor augue. Velit.
-footerTitle: " "
-footerBody: " "
+footerTitle: "  "
+footer-body: " "
 footerImage: https://s3-alpha-sig.figma.com/img/8c50/5633/e4ab43b05b52bd15b33ba8459244ff18?Expires=1658707200&Signature=SokSn6HS0wGUiStFSpWgc~9~ewLjqwGWYEVOq2sin797U~TLPoNpBOywlar~uJAQQPAy9w89bCyoco71GNSgEYihXnLdjUx7tDht0yzj3t5RwlNZY1tuFYxXnDMPLo7F3kA82VfPIiqWVfLYBX-qFUNTrVEoamZwQx1BfhXoN3vp6J8Lhhb4MvRKaeDhPLzQmXXaMQJXhx08ymn2D70hEnOXmDYtyUXu8sWTYV4Lk1-YQfQ5y83RIT~wLhAwAzsScOABcnO7YbQis0hKguiefgwnwxoOtjtSwJ1FqKXwGjZvWrLml0AnRb5DUCNbVEaT91upJRE4-V5iZbrwSE9xSA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA
+testimonials:
+  - image: https://s3-alpha-sig.figma.com/img/9c79/576b/04ebd01d2415dd564c8d790998c9e810?Expires=1659916800&Signature=EAUbvlxBf05suXVpQfDm~hQ24RxmXOUzToHU7EuTvcr7Ahkcp3rGG~GnXM2xtjb5UgycsgjCbFtscunRU2DJFogOG66XmjLAWhy9ycBFy3IjrcLJJEVUNOZBpNmspTW7D-6gqrPcZaF-hLab9DLJvGrDE3ryR3LKSZsYuuVfVxWyL1Ow~PgO69N3G1o-KLmwgo5IOeVQzNKWaxfb6TJe7OVEIPLbk0Pqkx7OjZ0zM~F46afM-6-~i~6vUrlmECD6~lfSFrtZYTNU0Qxb6MRIcwWw5fXRyU2ymUNargQOYb1SSsk2sMwuAPCZzOdF9yNOnYDyR-N4b52wW-pIlYzQPQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA
+    testimonialTitle: We do great things at Token Engineering
+    testimonialBody: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Quisque placerat scelerisque tortor ornare ornare. Quisque placerat
+      scelerisque tortor ornare ornare Convallis felis vitae tortor augue.
+      Velit.
+    testimonialName: John Doe
+    testimonialRole: CEO, Business Cloud+
+footerBody: " "
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor augue. Velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor augue. Velit.
